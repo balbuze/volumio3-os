@@ -111,9 +111,9 @@ device_chroot_tweaks_pre() {
 
   log "USB Card Ordering"
   cat <<-EOF >/etc/modprobe.d/alsa-base.conf
-  # USB DACs will have device number 5 in whole Volumio device range
-  # For tinkerboard, we specify that internal USB audio should be at device 1
-  options snd-usb-audio index=1,5 vid=0x0bda pid=0x481a
+# USB DACs will have device number 5 in whole Volumio device range
+# For tinkerboard, we specify that internal USB audio should be at device 1
+options snd-usb-audio index=1,5 vid=0x0bda pid=0x481a
 	EOF
 
   log "Installing Tinkerboard Bluetooth Utils and Firmware"
